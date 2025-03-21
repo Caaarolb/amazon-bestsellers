@@ -21,6 +21,7 @@
   "devDependencies": {
     "@types/aws-lambda": "^8.10.147",
     "@types/puppeteer": "^5.4.7",
+    "serverless-offline": "^14.4.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.2"
   }
