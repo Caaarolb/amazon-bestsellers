@@ -1,0 +1,40 @@
+service: amazon-scraper
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  stage: dev
+  region: us-east-1
+
+functions:
+  getProdutos:
+    handler: src/handler.get
+    events:
+      - http:
+          path: produtos
+          method: get
+          cors: true
+  
+  postProdutos:
+    handler: src/handler.post
+    events:
+      - http:
+          path: produtos
+          method: post
+          cors: true
+
+resources:
+  Resources:
+    ProdutosTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: Produtos
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1

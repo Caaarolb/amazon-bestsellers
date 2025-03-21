@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "target": "ES2020",        // Ou outro alvo como ES2019 ou ES6
+      "module": "commonjs",      // Para usar módulos CommonJS (usado no Node.js)
+      "lib": ["ES2020", "dom"],  // Inclui os tipos de DOM para o navegador
+      "strict": true,            // Ativa verificações estritas de tipo
+      "esModuleInterop": true,   // Permite importar módulos CommonJS com `import`
+      "skipLibCheck": true,      // Ignora checagem de tipos nas bibliotecas
+      "forceConsistentCasingInFileNames": true
+    },
+    "include": [
+      "src/**/*.ts"  // Incluir todos os arquivos TypeScript dentro da pasta `src`
+    ]
+  }
+  
