@@ -52,7 +52,7 @@ export async function scrapeProducts(): Promise<CategoryProducts[]> {
   await browser.close();
 
   // envia os produtos coletados para a API
-  /* try {
+   try {
     const response = await axios.post('https://dbqle43khh.execute-api.us-east-1.amazonaws.com/dev/produtos', {
       id: new Date().toISOString(),
       products: productsByCategory,
@@ -62,7 +62,7 @@ export async function scrapeProducts(): Promise<CategoryProducts[]> {
   } catch (error) {
     console.error('Erro ao enviar produtos para o DynamoDB:', error);
   }
-*/
+
   return productsByCategory;
 }
 
