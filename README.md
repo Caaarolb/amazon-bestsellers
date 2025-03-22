@@ -63,11 +63,11 @@ Após o deploy, a API estará disponível no API Gateway.
 
 Listar produtos (GET)
 ```
-GET https://seu-endpoint.amazonaws.com/dev/produtos
+GET https://dbqle43khh.execute-api.us-east-1.amazonaws.com/dev/produtos/
 ```
 Cadastrar produtos manualmente (POST)
 ```
-POST https://seu-endpoint.amazonaws.com/dev/produtos
+POST https://dbqle43khh.execute-api.us-east-1.amazonaws.com/dev/produtos/
 Content-Type: application/json
 
 {
