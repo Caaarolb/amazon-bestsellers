@@ -103,7 +103,6 @@ Content-Type: application/json
 📝 Observações
 O ID da categoria é gerado automaticamente no backend.
 
-O ID dos produtos inicia em 1 e aumenta de forma sequencial.
 
 O projeto segue as boas práticas de arquitetura Serverless.
 
