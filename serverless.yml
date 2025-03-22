@@ -6,6 +6,9 @@ provider:
   stage: dev
   region: us-east-1
 
+plugins:
+  - serverless-offline
+
 functions:
   getProdutos:
     handler: src/handler.get
@@ -14,13 +17,37 @@ functions:
           path: produtos
           method: get
           cors: true
-  
+
+  getProdutoById:
+    handler: src/handler.getById
+    events:
+      - http:
+          path: produtos/{id}
+          method: get
+          cors: true
+
   postProdutos:
     handler: src/handler.post
     events:
       - http:
           path: produtos
           method: post
+          cors: true
+
+  updateProduto:
+    handler: src/handler.update
+    events:
+      - http:
+          path: produtos/{id}
+          method: put
+          cors: true
+
+  deleteProduto:
+    handler: src/handler.deleteProduto
+    events:
+      - http:
+          path: produtos/{id}
+          method: delete
           cors: true
 
 resources:

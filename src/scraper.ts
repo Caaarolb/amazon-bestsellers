@@ -39,9 +39,9 @@ export async function scrapeProducts(): Promise<CategoryProducts[]> {
           const imageElement = item.querySelector('img.a-dynamic-image.p13n-sc-dynamic-image.p13n-product-image');
 
           return {
-            title: titleElement instanceof HTMLElement ? titleElement.innerText.trim() : 'No title',
-            price: priceElement instanceof HTMLElement ? priceElement.innerText.trim() : 'No price',
-            image: imageElement instanceof HTMLImageElement ? imageElement.src : 'No image',
+            title: titleElement instanceof HTMLElement ? titleElement.innerText.trim() : 'Sem titulo',
+            price: priceElement instanceof HTMLElement ? priceElement.innerText.trim() : 'Preço indisponivel',
+            image: imageElement instanceof HTMLImageElement ? imageElement.src : 'Sem imagem',
           };
         });
 
@@ -52,7 +52,7 @@ export async function scrapeProducts(): Promise<CategoryProducts[]> {
   await browser.close();
 
   // envia os produtos coletados para a API
-  try {
+  /* try {
     const response = await axios.post('https://dbqle43khh.execute-api.us-east-1.amazonaws.com/dev/produtos', {
       id: new Date().toISOString(),
       products: productsByCategory,
@@ -62,7 +62,7 @@ export async function scrapeProducts(): Promise<CategoryProducts[]> {
   } catch (error) {
     console.error('Erro ao enviar produtos para o DynamoDB:', error);
   }
-
+*/
   return productsByCategory;
 }
 
