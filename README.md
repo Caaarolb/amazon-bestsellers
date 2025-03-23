@@ -17,7 +17,7 @@ Este projeto realiza **Web Scraping** dos produtos mais vendidos da **Amazon Bra
 ## 📌 Funcionalidades
 
 ✔️ Coleta os **3 produtos mais vendidos** de cada categoria na Amazon  
-✔️ Armazena os dados no **DynamoDB** com IDs sequenciais  
+✔️ Armazena os dados no **DynamoDB** 
 ✔️ Disponibiliza uma **API REST** para acesso aos produtos  
 ✔️ Implementação usando **arquitetura Serverless**  
 
