@@ -11,15 +11,16 @@ Este projeto realiza **Web Scraping** dos produtos mais vendidos da **Amazon Bra
 - **AWS DynamoDB** para armazenamento
 - **AWS Lambda** e **API Gateway** para a API
 - **Serverless Framework** para implantação
+- **Insomnia** para Testar a API
 
 ---
 
 ## 📌 Funcionalidades
 
-✔️ Coleta os **3 produtos mais vendidos** de cada categoria na Amazon  
-✔️ Armazena os dados no **DynamoDB** 
-✔️ Disponibiliza uma **API REST** para acesso aos produtos  
-✔️ Implementação usando **arquitetura Serverless**  
+✔️ Coleta os **3 produtos mais vendidos** de cada categoria na Amazon <br>
+✔️ Armazena os dados no **DynamoDB** <br>
+✔️ Disponibiliza uma **API REST** para acesso aos produtos  <br>
+✔️ Implementação usando **arquitetura Serverless**  <br>
 
 ---
 
